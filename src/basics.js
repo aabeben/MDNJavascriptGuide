@@ -1,10 +1,8 @@
-var input= true;
-if(input === undefined) {
-    console.log('the value of input was: '+input);
-} else {
-    console.log('the value of input was: '+input);
+if(true){
+        var x = 5;
 }
-var a;
-a + 2;
-var n = null;
-console.log(n*32, n?' false':' true');
+console.log(x);
+if(true){
+    let y = 5;
+}
+console.log(y);
