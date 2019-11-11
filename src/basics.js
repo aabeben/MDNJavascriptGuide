@@ -1,10 +1,9 @@
-/ * Function declaration */
-foo();
-function foo(){
-    console.log('bar');
+// THIS WILL CAUSE AN ERROR
+function f(){
+
 }
-/* Function declaration */
-baz();
-var baz = function(){
-    console.log('bar2');
-};
+// THIS WIL CAUSE AN ERROR TOO
+function f(){
+    const g = 5;
+    var g;
+}
