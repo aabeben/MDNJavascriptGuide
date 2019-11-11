@@ -1,9 +1,5 @@
-// THIS WILL CAUSE AN ERROR
-function f(){
-
-}
-// THIS WIL CAUSE AN ERROR TOO
-function f(){
-    const g = 5;
-    var g;
-}
+const MY_OBJECT = {'key':'value'};
+MY_OBJECT.key = 'otherValue';
+const MY_ARRAY = ['HTML','CSS'];
+MY_ARRAY.push('JAVASCRIPT');
+console.log(MY_ARRAY);
