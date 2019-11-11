@@ -1,5 +1,4 @@
-const MY_OBJECT = {'key':'value'};
-MY_OBJECT.key = 'otherValue';
-const MY_ARRAY = ['HTML','CSS'];
-MY_ARRAY.push('JAVASCRIPT');
-console.log(MY_ARRAY);
+var answer = 42;
+console.log(answer);
+answer = 'Thanks for all the fish...';
+console.log(answer);
