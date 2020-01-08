@@ -1,36 +1,11 @@
 /*
- * Literal Objek
- *
- *   Sebuah literal objek ialah sebuah daftar kosong atau lebih pasangan dari nama
- * properti dan nilai yang terkait dari sebuah objek, dipagari di dalam kurung kurawal ({}).
- *
- *   Peringatan:
- *
- *     Jangan gunakan sebuah literal objek di permulaan dari sebuah pernyataan! ini akan mengarahkan
- *   kepada kesalahan (atau akan bertingkah tidak sesuai yang diharapkan),
- *   karena { akan ditafsirkan sebagai permulaan dari sebuah blok.
- *
- *     Berikut adalah sebuah contoh dari sebuah literal objek. Elemen pertama dari sebuah objek car
- *   mendifinisikan sebuah properti, myCar, dan menugaskan sebuah untaian "Saturn" ke padanya.
- *   Elemen kedua properti getCar langsung ditugaskan hasil dari pemanggilan fungsi (_carTypes("Honda"))
- *   Elemen ketiga, properti special gunakan peubah yang ada (sales).
+ *   Sebagai tambahan, Anda dapat menggunakan sebuah angka atau literal untaian
+ * sebagai nama dari sebuah properti atau menyarangkan sebuah objek di dalam objek lain.
  */
 
-var sales = 'Toyota';
+// Contoh berikut menggunakan pilihan-pilihan tersebut.
 
-function carTypes(name)
-{
-	if(name==='Honda')
-	{
-		return name;
-	} else
-	{
-		return 'Sorry, we don\'t sell'+name+'.';
-	}
-}
+var car = {manyCars: {a:'Saab', b:'Jeep'}, 7:'Mazda'};
 
-var car = {myCar:'Saturn', getCar: carTypes('Honda'), special: sales};
-
-console.log(car.myCar); // Saturn
-console.log(car.getCar); // Honda
-console.log(car.special); // Toyota
+console.log(car.manyCars['b']); // Jeep
+console.log(car[7]); // Mazda
