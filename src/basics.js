@@ -1,20 +1,23 @@
-/*    Nama properti objek dapat berupa sembarang untaian
- *  termasuk untaian kosong.
+/*  Literal Objek yang ditingkatkan
  *
- *    Jika nama properti sekiranya bukan sebuah pengenal JavaScript yang sah atau angka
- *  ,ia wajib dipagari di dalam tanda kutip.
+ *    Pada ES2015, literal objek diperluaskan mendukung men-set purnarupa saat pembangunan,
+ *  steno untuk penugasan foo: foo, pendefinisian metode, pemanggilan super, dan perhitungan
+ *  nama properti dengan ekspresi.
  *
- *    Nama properti yang bukan pengenal yang sah tidak dapat diakses sebagai properti titik,
- *  tetapi dapat diakses dan diset dengan notasi mirip-larik (."[]")
- *
+ *    Digabungkan, ini semua juga lebih mendekatkan keduanya yakni literal objek dan deklarasi class
+ *  dan mengizinkan rancangan berbasis-objek memanfaatkan beberapa kenyamanan yang sama.
  */
 
-var unusualPropertyNames = {
-  '':'An empty string',
-  '!':'Bang!'
-};
-
-console.log(unusualPropertyNames.''); // SyntaxError: Unexpected string
-console.log(unusualPropertyNames['']); // An empty string
-console.log(unusualPropertyNames.!); // SyntaxError: Unexpected token !
-console.log(unusualPropertyNames['!']); // Bang!
+var obj = {
+  // __proto__
+  __proto__: theProtoObj,
+  // Steno untuk 'handler: handler'
+  handler,
+  // Metode
+  toString(){
+	  // Memanggil super
+	  return 'd '+super.toString();
+  },
+  // Nama properti hasil hitungan (dinamis)
+  ['prop_'+(()=>42)()]:42
+}
