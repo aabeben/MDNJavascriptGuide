@@ -1,11 +1,20 @@
-/*
- *   Sebagai tambahan, Anda dapat menggunakan sebuah angka atau literal untaian
- * sebagai nama dari sebuah properti atau menyarangkan sebuah objek di dalam objek lain.
+/*    Nama properti objek dapat berupa sembarang untaian
+ *  termasuk untaian kosong.
+ *
+ *    Jika nama properti sekiranya bukan sebuah pengenal JavaScript yang sah atau angka
+ *  ,ia wajib dipagari di dalam tanda kutip.
+ *
+ *    Nama properti yang bukan pengenal yang sah tidak dapat diakses sebagai properti titik,
+ *  tetapi dapat diakses dan diset dengan notasi mirip-larik (."[]")
+ *
  */
 
-// Contoh berikut menggunakan pilihan-pilihan tersebut.
+var unusualPropertyNames = {
+  '':'An empty string',
+  '!':'Bang!'
+};
 
-var car = {manyCars: {a:'Saab', b:'Jeep'}, 7:'Mazda'};
-
-console.log(car.manyCars['b']); // Jeep
-console.log(car[7]); // Mazda
+console.log(unusualPropertyNames.''); // SyntaxError: Unexpected string
+console.log(unusualPropertyNames['']); // An empty string
+console.log(unusualPropertyNames.!); // SyntaxError: Unexpected token !
+console.log(unusualPropertyNames['!']); // Bang!
