@@ -1,6 +1,8 @@
-// Koma berlebih di dalam literal larik.
-// Anda tidak perlu untuk menentukan semua elemen di dalam sebuah literal larik
-// Jika Anda meletakkan dua koma dalam satu baris, larik akan memberikan nilai
-// undefined bagi elemen-elemen yang tidak ditentukan.
-// Contoh berikut membuat larik fish
-let fish = ['Lion', , 'Angel'];
+// Jika Anda menyertakan sebuah koma yang mengekor pada akhir dari sebuah daftar elemen-elemen
+// Koma tersebut akan diabaikan.
+// Pada contoh berikut, panjangnya larik adalah tiga.
+// Tidak ada myList[3].
+// Semua koma lainnya di dalam daftar mengindikasikan sebuah elemen baru.
+// Catatan koma-koma yang mengekor akan menimbulkan galat pada versi tua peramban
+// dan merupakan praktek terbaik untuk membuang koma-koma tersebut.
+let myList = ['home', , 'school',];
