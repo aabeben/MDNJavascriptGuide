@@ -1,28 +1,36 @@
-// Literal titik-apung
 /*
- * Sebuah literal titik-apung dapat memiliki bagian-bagian berikut:
+ * Literal Objek
  *
- * - Sebuah bilangan bulat desimal (basis 10) yang dapat memiliki tanda
- *   (diawali oleh "+" atau "-"),
+ *   Sebuah literal objek ialah sebuah daftar kosong atau lebih pasangan dari nama
+ * properti dan nilai yang terkait dari sebuah objek, dipagari di dalam kurung kurawal ({}).
  *
- * - Sebuah titik desimal ("."),
+ *   Peringatan:
  *
- * - Sebuah pecahan (angka desimal lain)
+ *     Jangan gunakan sebuah literal objek di permulaan dari sebuah pernyataan! ini akan mengarahkan
+ *   kepada kesalahan (atau akan bertingkah tidak sesuai yang diharapkan),
+ *   karena { akan ditafsirkan sebagai permulaan dari sebuah blok.
  *
- * - Sebuah pangkat
- *
- *   Sebuah bagian pangkat ialah "e" atau "E" diikuti oleh sebuah bilangan bulat, yang dapat
- * memiliki tanda (diawali oleh "+" atau "-").
- *
- *   Sebuah literal titik-apung wajib paling sedikitnya satu digit, dan baik sebuah titik desimal
- * atau "e" (atau "E").
+ *     Berikut adalah sebuah contoh dari sebuah literal objek. Elemen pertama dari sebuah objek car
+ *   mendifinisikan sebuah properti, myCar, dan menugaskan sebuah untaian "Saturn" ke padanya.
+ *   Elemen kedua properti getCar langsung ditugaskan hasil dari pemanggilan fungsi (_carTypes("Honda"))
+ *   Elemen ketiga, properti special gunakan peubah yang ada (sales).
  */
-// Lebih singkatnya, sintaksnya ialah:
 
-//[(+|-)][digits].[digits][(E|e)[(+|-)digits]
+var sales = 'Toyota';
 
-// Sebagai contoh:
-3.1415926
--.123456789
--3.1E+12
-.1e-23
+function carTypes(name)
+{
+	if(name==='Honda')
+	{
+		return name;
+	} else
+	{
+		return 'Sorry, we don\'t sell'+name+'.';
+	}
+}
+
+var car = {myCar:'Saturn', getCar: carTypes('Honda'), special: sales};
+
+console.log(car.myCar); // Saturn
+console.log(car.getCar); // Honda
+console.log(car.special); // Toyota
