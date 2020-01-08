@@ -1,3 +1,2 @@
-console.log(parseInt('101',2));
-console.log('1.1' + '1.1');
-console.log(+'1.1' + +'1.1');
+// Contoh berikut membuat larik cofees dengan tiga elemen dan memiliki panjang sama dengan tiga:
+let coffees = ['French Roast','Colombian','Kona'];
