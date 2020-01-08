@@ -1,16 +1,11 @@
-/*  Literal Untaian
+/*  Ada dapat memanggil sembarang metode objek untaian pada nilai literal untaian.
  *
- *    Sebuah literal untaian ialah nol atau karakter lebih dipagari di dalam kutip ganda (")
- *  atau kutip tunggal (').
- *    
- *    Sebuah untaian harus dibatasi oleh tanda kutip dari jenis yang sama (Jadi, baik keduanya
- *  tanda kutip tunggal atau, keduanya tanda kutip ganda).
+ *  JavaScript mengkonversikan literal untaian menjadi sebuah objek untaian sementara secara
+ *  otomatis, panggil metode, kemudian campakkan objek untaian sementara.
+ *
+ *  Anda juga dapat menggunakan properti String.length pada literal untaian.
  */
 
-// Contoh berikut merupakan literal untaian:
+// Akan mencetak jumlah simbol pada untaian mencakup spasiputih.
 
-'foo'
-"bar"
-'1234'
-'one line \n another line'
-"John's cat"
+console.log("John's cat".length); // Dalam hal ini, 10.
