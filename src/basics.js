@@ -1,9 +1,16 @@
-/*  Literal ReExp
+/*  Literal Untaian
  *
- *    Sebuah literal regex (yang akan didefinisikan terperinci belakangan)
- *  adalah sebuah pola yang dipagar di antara dua garis miring.
+ *    Sebuah literal untaian ialah nol atau karakter lebih dipagari di dalam kutip ganda (")
+ *  atau kutip tunggal (').
+ *    
+ *    Sebuah untaian harus dibatasi oleh tanda kutip dari jenis yang sama (Jadi, baik keduanya
+ *  tanda kutip tunggal atau, keduanya tanda kutip ganda).
  */
 
-// Berikut adalah sebuah contoh dari sebuah literal regex.
+// Contoh berikut merupakan literal untaian:
 
-var re = /ab+c/;
+'foo'
+"bar"
+'1234'
+'one line \n another line'
+"John's cat"
