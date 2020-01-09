@@ -1,47 +1,13 @@
-/*  Menggunakan karakter khusus di dalam untaian
+/*  Karakter pelarian diri
  *
- *  Tambahan pada karakter lazim, Anda juga dapat menyertakan karakter khusus di dalam untaian,
- *  seperti yang tampak pada contoh berikut.
+ *    Untuk karakter-karakter yang tidak terdaftar pada tabel, awalan slash belakang
+ *  diabaikan, tetapi pemakaian ini sudah usang dan harus dihindari.
+ *
+ *    Anda dapat menyisipkan sebuah tanda kutip di dalam sebuah untaian dengan mengawalinya
+ *  dengan sebuah slash belakang.
+ *
+ *    Ini dikenal sebagai melarikan diri tanda kutip. Sebagai contoh:
  */
 
-/*
- *   Tabel: karakter khusus JavaScript
- *
- *   Karakter	Arti
- *   \0		Bait null
- *   
- *   \b		Spasi belakang
- *
- *   \f		Umpan Formulir
- *
- *   \n		Baris baru
- *
- *   \r		Gerbong balik
- *
- *   \t		Tab
- *
- *   \v		Tab vertikal
- *
- *   \'		Apostrof atau kutip tunggal
- *
- *   \"		Kutip ganda
- *
- *   \\		Karakter slash belakang
- *
- *   \XXX	Karakter dengan pengkodean Latin-1 ditentukan oleh sampai dengan 
- *   		3 digit oktal XXX antara 0 dan 377.
- *   		Sebagai contoh, \251 ialah urutan okta untuk simbol hak cipta
- *
- *   \xXX	Karakter dengan pengkodean Latin-1 ditentukan oleh dua digit heksadesimal
- *   		antara 00 dan FF.
- *
- *   		Sebagai contoh, \xA9 ialah urutan heksadesimal untuk simbol hak cipta.
- *   \uXXXX	Karakter Unikode ditentukan oleh empat digit heksadesimal XXXX.
- *		Sebagai contoh, \u00A9 ialah urutan Unikode untuk simbol hak cipta.
- *		Lihat urutan pelarian diri Unikode.
- *
- *   \u{XXXXX}	Pelarian titik kode Unikode.
- *   		Sebagai contoh, \u{2F804} ialah sama dengan pelarian Unikode sederhana
- *   		\uD87E\uDC04.
- */
-'one line \n another line'
+var quote = "He read \"The Cremation of Sam McGee\" by R.W> Service.";
+console.log(quote); // Hasilnya ialah seperti ini He read "The Cremation of Sam McGee" by R.W. Service.
