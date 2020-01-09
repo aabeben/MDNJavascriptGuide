@@ -1,10 +1,9 @@
-/*  Sekalipun JavaScript tidak memiliki sintaks "heredoc",
- *  Anda dapat menghampirinya dengan menambahkan sebuah pelarian ganti baris
- *  dan sebuah ganti baris yang dilarikan diri pada akhir setiap baris:
+/*  ECMAScript 2015 memperkenalkan sebuah literal jenis baru, yakni literal cetakan.
+ *  Ini memperkenankan banyak fitur baru, termasuk untaian banyak baris!
  */
 
-var puisi = 
-'Mawar ialah merah,\n\
-Violet ialah biru,\n\
-Gula ialah manis,\n\
-dan demikianlah foo.';
+var puisi =
+`Mawar ialah merah,
+Violet ialah biru.
+Gula ialah manis,
+dan demikianlah foo.`;
