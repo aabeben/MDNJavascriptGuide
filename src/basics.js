@@ -1,7 +1,10 @@
-/* Untuk menyertakan sebuah literal slash belakang
- * di dalam sebuah untaian, Anda wajib melarikan diri karakter slash belakang.
- * Sebagai contoh, untuk menugaskan jalan setapak berkas c:\temp ke sebuah untaian,
- * gunakan berikut:
+/* Anda juga dapat melarikan diri ganti baris dengan mengawali mereka dengan slash belakang.
+ * Slash belakang dan ganti baris keduanya akan dihilangkan dari nilai untaian.
  */
 
-var home = 'c:\\temp';
+var str = 'Untaian ini \
+dipecah \
+melintasi banyak \
+baris.';
+
+console.log(str); // Untaian ini dipecah melintasi banyak baris.
