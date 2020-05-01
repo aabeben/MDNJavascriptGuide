@@ -1,9 +1,13 @@
-/*  ECMAScript 2015 memperkenalkan sebuah literal jenis baru, yakni literal cetakan.
- *  Ini memperkenankan banyak fitur baru, termasuk untaian banyak baris!
+/**
+ * Yang paling dasar daripada pernyataan adalah sebuah pernyataan blok,
+ * yang digunakan untuk mengelompokkan pernyataan-pernyataan.
+ * Blok tersebut dibatasi oleh pasangan kurung kurawal.
  */
-
-var puisi =
-`Mawar ialah merah,
-Violet ialah biru.
-Gula ialah manis,
-dan demikianlah foo.`;
+{
+	pernyataan_1;
+	pernyataan_2;
+	.
+        .
+	.
+	pernyataan_n;
+}
