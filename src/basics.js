@@ -1,13 +1,10 @@
 /**
- * Yang paling dasar daripada pernyataan adalah sebuah pernyataan blok,
- * yang digunakan untuk mengelompokkan pernyataan-pernyataan.
- * Blok tersebut dibatasi oleh pasangan kurung kurawal.
+ * Contoh dari pernyataan blok.
+ * Pernyataan-pernyataan biasanya digunakan bersama pernyataan
+ * alur kendali (if, for, while)
  */
-{
-	pernyataan_1;
-	pernyataan_2;
-	.
-        .
-	.
-	pernyataan_n;
+let x = 0;
+while (x < 10){
+	console.log(x);
+	x++;
 }
